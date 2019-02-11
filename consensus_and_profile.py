@@ -40,10 +40,21 @@ def get_consensus(profile_dict):
 
 # sample output
 
-file = open('input_1.txt').readlines()
+file = open('input/input_1.txt').readlines()
 string = read_input(file)
 profile_dict = get_profile(string)
 consensus = get_consensus(profile_dict)
 print(consensus)
 for key in ['A', 'C', 'G', 'T']:
     print(key + ": " + " ".join(str(x) for x in profile_dict[key]))
+
+
+'''
+It prints:
+
+ATGCAACT
+A: 5 1 0 0 5 5 0 0
+C: 0 0 1 4 2 0 6 1
+G: 1 1 6 3 0 1 0 0
+T: 1 5 0 0 0 1 1 6
+'''
